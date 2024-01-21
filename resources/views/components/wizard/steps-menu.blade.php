@@ -22,12 +22,12 @@
                     <div class="align-center absolute flex content-center items-center align-middle"
                         style="width: calc(100% - 2.5rem - 1rem); top: 70%; transform: translate(-50%, -50%)">
                         <div class="align-center w-full flex-1 items-center rounded align-middle">
-                            <div class="w-0 rounded bg-gray-300 py-1" style="width: 100%;"></div>
+                            <div class="w-0 rounded {{Arr::exists($completed, 1) ? 'bg-blue-300' : 'bg-gray-300' }}  py-1" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="text-center text-xs md:text-base">Proceso</div>
-                    <div class="mx-auto flex h-10 w-10 items-center rounded-full bg-gray-500 text-lg text-white">
-                        <span class="w-full animate-pulse text-center text-white">
+                    <div class="mx-auto flex h-10 w-10 items-center rounded-full {{Arr::exists($completed, 2) ? 'bg-blue-500' : 'bg-gray-500' }}  text-lg text-white {{($step == 2) ? 'border-4 border-gray-300' : null}}">
+                        <span class="w-full {{Arr::exists($completed, 2) ? null : 'animate-pulse' }} text-center text-white">
                             <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 width="24" height="24">
                                 <path class="heroicon-ui"
@@ -42,13 +42,12 @@
                     <div class="align-center absolute flex content-center items-center align-middle"
                         style="width: calc(100% - 2.5rem - 1rem); top: 70%; transform: translate(-50%, -50%)">
                         <div class="align-center w-full flex-1 items-center rounded align-middle">
-                            <div class="w-0 rounded bg-gray-300 py-1" style="width: 100%;"></div>
+                            <div class="w-0 rounded {{Arr::exists($completed, 2) ? 'bg-blue-300' : 'bg-gray-300' }} py-1" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="text-center text-xs md:text-base">Obtención</div>
-                    <div
-                        class="mx-auto flex h-10 w-10 items-center rounded-full border-2 border-gray-200 bg-gray-500 text-lg text-white">
-                        <span class="w-full animate-pulse text-center text-white">
+                    <div class="mx-auto flex h-10 w-10 items-center rounded-full {{Arr::exists($completed, 3) ? 'bg-blue-500' : 'bg-gray-500' }}  text-lg text-white {{($step == 3) ? 'border-4 border-gray-300' : null}}">
+                        <span class="w-full {{Arr::exists($completed, 3) ? null : 'animate-pulse' }} text-center text-white">
                             <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 width="24" height="24">
                                 <path class="heroicon-ui"
@@ -63,13 +62,12 @@
                     <div class="align-center absolute flex content-center items-center align-middle"
                         style="width: calc(100% - 2.5rem - 1rem); top: 70%; transform: translate(-50%, -50%)">
                         <div class="align-center w-full flex-1 items-center rounded align-middle">
-                            <div class="w-0 rounded bg-gray-300 py-1" style="width: 100%;"></div>
+                            <div class="w-0 rounded {{Arr::exists($completed, 3) ? 'bg-blue-300' : 'bg-gray-300' }} py-1" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="text-center text-xs md:text-base">Final</div>
-                    <div
-                        class="mx-auto flex h-10 w-10 items-center rounded-full border-2 border-gray-200 bg-gray-500 text-lg text-white">
-                        <span class="w-full animate-pulse text-center text-white">
+                    <div class="mx-auto flex h-10 w-10 items-center rounded-full {{Arr::exists($completed, 4) ? 'bg-blue-500' : 'bg-gray-500' }}  text-lg text-white {{($step == 4) ? 'border-4 border-gray-300' : null}}">
+                        <span class="w-full {{Arr::exists($completed, 4) ? null : 'animate-pulse' }} text-center text-white">
                             <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 width="24" height="24">
                                 <path class="heroicon-ui"
