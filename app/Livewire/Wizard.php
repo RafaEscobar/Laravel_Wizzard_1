@@ -13,7 +13,7 @@ class Wizard extends Component
     {
         $this->step = 1;
         $this->completed = [
-            1 => 'Uno'
+            // 1 => 'Uno'
         ];
     }
 
