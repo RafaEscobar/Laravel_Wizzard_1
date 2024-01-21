@@ -9,6 +9,7 @@ class Wizard extends Component
     public $step;
     public $completed;
     public $steps;
+    public $noseInput;
 
     public function mount()
     {
@@ -36,5 +37,10 @@ class Wizard extends Component
         $lastStep = $this->step;
         $this->step -= 1;
         unset($this->completed[$lastStep-1]);
+    }
+
+    public function detonar()
+    {
+        dd($this->noseInput);
     }
 }

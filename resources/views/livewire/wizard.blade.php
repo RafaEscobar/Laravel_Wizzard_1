@@ -15,7 +15,6 @@
         @break
         @default
     @endswitch
-    <p>{{$step}}</p>
     <div class="flex justify-end gap-6 p-2">
         @if ($step != 1)
             <button
