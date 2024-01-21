@@ -8,9 +8,9 @@
           <div class="p-4">
             @livewire('wizard')
           </div>
-          <div class="border-t px-4 py-2 flex justify-end">
+          {{-- <div class="border-t px-4 py-2 flex justify-end">
             <button x-on:click="open = false" class="px-3 py-1 bg-indigo-500 text-white  rounded-md w-full sm:w-auto">Cerrar</button>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
