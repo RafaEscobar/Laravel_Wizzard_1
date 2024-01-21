@@ -24,8 +24,17 @@ class Wizard extends Component
 
     public function nextStep()
     {
-        $previouStep = $this->step;
-        $this->step += 1;
-        $this->completed[$previouStep] = $this->steps[$previouStep - 1];
+        if ($this->step < 4) {
+            $previouStep = $this->step;
+            $this->step += 1;
+            $this->completed[$previouStep] = $this->steps[$previouStep - 1];
+        }
+    }
+
+    public function prevStep()
+    {
+        $lastStep = $this->step;
+        $this->step -= 1;
+        unset($this->completed[$lastStep-1]);
     }
 }
