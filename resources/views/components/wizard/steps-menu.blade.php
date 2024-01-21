@@ -1,11 +1,13 @@
+@props(['step', 'completed'])
+
 <div class="m-10">
     <div class="w-full">
         <div class="flex">
             <div class="w-1/4">
                 <div class="text-center text-xs md:text-base">Inicio</div>
                 <div class="">
-                    <div class="mx-auto flex h-10 w-10 items-center rounded-full bg-gray-500 text-lg text-white">
-                        <span class="w-full animate-pulse text-center text-white">
+                    <div class="mx-auto flex h-10 w-10 items-center rounded-full {{Arr::exists($completed, 1) ? 'bg-blue-500' : 'bg-gray-500' }}  text-lg text-white {{($step==1) ? 'border-4 border-gray-300' : null}}">
+                        <span class="w-full {{Arr::exists($completed, 1) ? null : 'animate-pulse' }}  text-center text-white">
                             <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 width="24" height="24">
                                 <path class="heroicon-ui"
